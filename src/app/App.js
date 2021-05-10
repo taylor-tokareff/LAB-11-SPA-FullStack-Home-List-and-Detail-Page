@@ -2,6 +2,8 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
+import charPage from '../characters/charPage';
+import charDetailPage from '../character/charDetailPage';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,25 +18,25 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Header/>
+          <Header />
           <main>
 
             <Switch>
               <Route path="/" exact={true}
                 render={routerProps => (
-                  <Home {...routerProps}/>
+                  <Home {...routerProps} />
                 )}
               />
 
-              <Route path="/resources" exact={true}
+              <Route path="/characters" exact={true}
                 render={routerProps => (
-                  <div>Implement a page of resources</div>
+                  <charPage {...routerProps} />
                 )}
               />
 
-              <Route path="/resources/:id"
+              <Route path="/characters/:id"
                 render={routerProps => (
-                  <div>Implement a page for id {routerProps.match.params.id}</div>
+                  <charDetailPage {...routerProps} />
                 )}
               />
 
@@ -42,7 +44,7 @@ class App extends Component {
 
             </Switch>
           </main>
-          <Footer/>
+          <Footer />
         </Router>
       </div>
     );
