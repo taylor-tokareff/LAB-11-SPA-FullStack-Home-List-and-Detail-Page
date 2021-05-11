@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { getCharacter } from '../utils/Mk-api.js';
+import { getCharacter } from '../utils/fetch-API.js';
 import './CharDetailPage.css';
 
 export default class CharDetailPage extends Component {
