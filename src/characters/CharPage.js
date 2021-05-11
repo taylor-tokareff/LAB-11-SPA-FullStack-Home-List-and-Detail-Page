@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import { getMortalKombat } from '../utils/Mk-api.js';
-import CharList from './CharList';
+import { getMortalKombat } from '../utils/mk-api.js';
+import CharList from './CharList';    
 
 import './CharPage.css';
 
