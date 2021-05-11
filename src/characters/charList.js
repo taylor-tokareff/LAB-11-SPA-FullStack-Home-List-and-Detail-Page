@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import charItem from './charItem';
-import './charList.css';
+import CharItem from './CharItem';
+import './CharList.css';
 
 
-class charList extends Component {
+class CharList extends Component {
 
   render() {
     const { characters } = this.props;
@@ -11,7 +11,7 @@ class charList extends Component {
     return (
       <ul className="charList">
         {characters.map(character => (
-          <charItem key={character.id} character={character} />
+          <CharItem key={character.id} character={character} />
         ))}
       </ul>
     );
@@ -19,4 +19,4 @@ class charList extends Component {
 
 }
 
-export default charList;
+export default CharList;

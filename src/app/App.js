@@ -2,8 +2,8 @@ import { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Home from '../home/Home';
-import charPage from '../characters/charPage';
-import charDetailPage from '../character/charDetailPage';
+import CharPage from '../characters/CharPage';
+import CharDetailPage from '../character/CharDetailPage';
 import {
   BrowserRouter as Router,
   Route,
@@ -30,13 +30,13 @@ class App extends Component {
 
               <Route path="/characters" exact={true}
                 render={routerProps => (
-                  <charPage {...routerProps} />
+                  <CharPage {...routerProps} />
                 )}
               />
 
               <Route path="/characters/:id"
                 render={routerProps => (
-                  <charDetailPage {...routerProps} />
+                  <CharDetailPage {...routerProps} />
                 )}
               />
 
