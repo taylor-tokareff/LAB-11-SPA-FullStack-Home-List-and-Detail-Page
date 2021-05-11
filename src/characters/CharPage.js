@@ -1,6 +1,7 @@
 import { Component } from 'react';
+import { getMortalKombat } from '../utils/fetch-API.js';
 import CharList from './CharList';
-import { getMortalKombat } from '../utils/Mk-api.js';
+
 import './CharPage.css';
 
 export default class CharPage extends Component {
