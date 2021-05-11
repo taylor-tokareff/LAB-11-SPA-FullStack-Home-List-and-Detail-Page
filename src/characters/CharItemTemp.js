@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './charItem.css';
+import './CharItem.css';
 
-class CatItem extends Component {
+class CharItem extends Component {
 
   render() {
     const character = this.props.character;
 
     return (
-      <li className="charItem">
+      <li className="CharItem">
         <Link to={`/characters/${character.id}`}>
           <h2>{character.name}</h2>
           <img src={character.url} alt={character.name} />
-          <p>Lives: {character.fightingStyle}</p>
+          <p>Fighting Style: {character.fightingStyle}</p>
         </Link>
       </li>
     );
@@ -20,4 +20,4 @@ class CatItem extends Component {
 
 }
 
-export default CatItem;
+export default CharItem;

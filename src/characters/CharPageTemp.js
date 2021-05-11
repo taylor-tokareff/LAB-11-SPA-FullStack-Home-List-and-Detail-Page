@@ -1,9 +1,9 @@
 import { Component } from 'react';
-import charList from './charList';
-import { getMortalKombat } from '../utils/mk-api.js';
-import './charPage.css';
+import CharList from './CharList';
+import { getMortalKombat } from '../utils/Mk-api.js';
+import './CharPage.css';
 
-export default class charPage extends Component {
+export default class CharPage extends Component {
   state = {
     characters: []
   }
@@ -22,13 +22,14 @@ export default class charPage extends Component {
     const { characters } = this.state;
 
     return (
-      <div className="charPage">
+      <div className="CharPage">
         <h2>List o' Characters</h2>
 
-        <charList characters={characters} />
+        <CharList characters={characters} />
 
       </div>
     );
   }
 
 }
+
