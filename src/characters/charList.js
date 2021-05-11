@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CharItem from './CharItem';
+import CharItem from './CharItemTemp';
 import './CharList.css';
 
 
