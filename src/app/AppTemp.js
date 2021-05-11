@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import Header from './Header';
-import Footer from './Footer';
+import Footer from './FooterTemp';
 import Home from '../home/Home';
 import CharPage from '../characters/CharPage';
 import CharDetailPage from '../character/CharDetailPage';
@@ -53,4 +53,5 @@ class App extends Component {
 }
 
 export default App;
+
 
