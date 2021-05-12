@@ -1,0 +1,53 @@
+.CharForm  {
+  background: #E89062;;
+  padding: 20px 50px;
+  max-width: 400px;
+}
+
+.CharForm p {
+  margin: 20px 0;
+}
+
+.CharForm label span {
+  display: block;
+  margin-bottom: 7px;
+  font-size: .85rem;
+  text-transform: uppercase;
+}
+
+.CharForm input, .CharForm select, .CharForm button {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.CharForm input[type=checkbox] {
+  margin-left: 0;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  box-sizing: border-box;
+}
+
+.CharForm .vertically-centered {
+  display: flex;
+  align-items: center;
+  text-transform: initial;
+}
+
+.CharForm select:invalid {
+  color: gray;
+}
+
+.CharForm option:disabled {
+  color: gray;
+}
+
+.CharForm button {
+  background: #65A7AB;
+  border: 1px solid #1F4E5C;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}

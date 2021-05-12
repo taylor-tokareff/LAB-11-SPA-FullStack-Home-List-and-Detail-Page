@@ -11,6 +11,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
+import CharForm from '../common/CharForm';
 
 class App extends Component {
 
@@ -31,6 +32,13 @@ class App extends Component {
               <Route path="/characters" exact={true}
                 render={routerProps => (
                   <CharPage {...routerProps} />
+                )}
+              />
+
+
+              <Route path="/characters/add" exact={true}
+                render={routerProps => (
+                  <CharForm {...routerProps} />
                 )}
               />
 
