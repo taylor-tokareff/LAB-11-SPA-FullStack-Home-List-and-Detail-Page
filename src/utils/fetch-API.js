@@ -22,7 +22,7 @@ export async function deleteChar(id) {
   return response.body;
 }
 
-export async function updateCat(char) {
+export async function updateChar(char) {
   const response = await request.put(`${URL}/${char.id}`).send(char);
   return response.body;
 }

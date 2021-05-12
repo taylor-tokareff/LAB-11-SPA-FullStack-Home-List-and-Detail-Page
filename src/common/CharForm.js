@@ -20,7 +20,7 @@ export default class CharForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.onSubmit(this.state);
+    this.props.onSubmit(this.state);
     console.log(this.state);
   }
 
@@ -52,7 +52,7 @@ export default class CharForm extends Component {
     const { name, species, url, introduced, isNinja, fightingStyle } = this.state;
     const { Char } = this.props;
 
-
+    console.log(this.state);
     return (
       <form className="CharForm" onSubmit={this.handleSubmit}>
         <p>
