@@ -11,11 +11,11 @@ export default class CharAddPage extends Component {
 
   handleAdd = async charToAdd => {
     const { history } = this.props;
-    console.log(charToAdd);
 
     try {
       this.setState({ loading: true });
       const newChar = await addChar(charToAdd);
+      console.log(newChar);
       history.push(`/characters/${newChar.id}`);
     }
     catch (err) {

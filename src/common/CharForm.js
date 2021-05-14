@@ -6,7 +6,7 @@ export default class CharForm extends Component {
     name: '',
     species: '',
     url: '',
-    introduced: '',
+    introduced: 1,
     isNinja: '',
     fightingStyle: ''
   }
