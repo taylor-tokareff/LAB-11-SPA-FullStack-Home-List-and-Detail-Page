@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-const URL = 'https://sheltered-beyond-60460.herokuapp.com/api/mortalkombat';
+const URL = '/api/mortalkombat';
 
 export async function getMortalKombat() {
   const response = await request.get(URL);
