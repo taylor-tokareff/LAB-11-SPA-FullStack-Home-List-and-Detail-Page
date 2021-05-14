@@ -1,20 +1,46 @@
 import { Component } from 'react';
-import { getCharacter } from '../utils/fetch-API.js';
+
+import { Link } from 'react-router-dom';
+import { getCharacter, deleteChar } from '../utils/fetch-API.js';
 import './CharDetailPage.css';
 
 export default class CharDetailPage extends Component {
   state = {
-    character: null
+    character: null,
+    loading: true
   }
 
   async componentDidMount() {
     const { match } = this.props;
-    const character = await getCharacter(match.params.id);
-    if (character) {
+    try {
+      const character = await getCharacter(match.params.id);
       this.setState({ character: character });
     }
-    else {
-      console.log('No character received. Check id and network tab');
+    catch (err) {
+      console.log(err.message);
+    }
+    finally {
+      this.setState({ loading: false });
+    }
+  }
+
+
+  handleDelete = async () => {
+    const { char } = this.state;
+    const { history } = this.props;
+
+    const confirmation = `Are you sure you want to delete ${char.name}?`;
+
+    if (!window.confirm(confirmation)) { return; }
+
+    try {
+      this.setState({ loading: true });
+      await deleteChar(char.id);
+      history.push('/characters');
+    }
+    catch (err) {
+      console.log(err.message);
+      this.setState({ loading: false });
     }
   }
 
@@ -32,6 +58,15 @@ export default class CharDetailPage extends Component {
         <p>Character fighting style: {character.fightingStyle}</p>
         <p>Game introduced: {character.introduced}</p>
         <p>Is ninja?: {String(character.isNinja)}</p>
+
+        <Link to={`/characters/${character.id}/edit`}>
+          Edit this Character
+        </Link>
+
+        <button className="delete" onClick={this.handleDelete}>
+          Delete this Character
+        </button>
+
       </div>
     );
   }

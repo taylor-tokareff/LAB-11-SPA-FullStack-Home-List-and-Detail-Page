@@ -1,2 +1,2 @@
-/api/*  https://sheltered-beyond-60460.herokuapp.com/api/:splat
+/api/*  https://sheltered-beyond-60460.herokuapp.com/api/:splat 200!
 /*    /index.html   200
