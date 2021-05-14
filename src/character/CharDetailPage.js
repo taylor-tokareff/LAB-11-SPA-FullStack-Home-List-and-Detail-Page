@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Loader from '../common/Loader';
+
 import { Link } from 'react-router-dom';
 import { getCharacter, deleteChar } from '../utils/fetch-API.js';
 import './CharDetailPage.css';
@@ -45,7 +45,7 @@ export default class CharDetailPage extends Component {
   }
 
   render() {
-    const { character, loading } = this.state;
+    const { character } = this.state;
 
     if (!character) return null;
 

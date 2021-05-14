@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import CharForm from '../common/CharForm';
-import Loader from '../common/Loader';
+
 import { addChar } from '../utils/fetch-API';
 import './CharAddPage.css';
 

@@ -13,7 +13,7 @@ import {
   Redirect
 } from 'react-router-dom';
 import './App.css';
-import CharForm from '../common/CharForm';
+
 
 class App extends Component {
 
